@@ -1,4 +1,4 @@
-# play-by-play-laravel-5-getting-started
+# Play-By-Play-Laravel-5-Getting-Started
 This project introduces the Laravel framework to a relatively green PHP developer who is tasked with building a functional and maintainable microservice application. It will cover everything from project setup &amp; installation to functioning endpoints with automated test support.
 
  # Getting started with Laravel
