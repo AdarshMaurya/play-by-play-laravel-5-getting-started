@@ -25,10 +25,15 @@ class ExampleTest extends TestCase
             ->see('Laravel 5');
     }
 
+    // public function testProductList()
+    // {
+    //   $this->get(route('products'))
+    //        ->assert(ResponseOk());
+    // }
+
     public function testProductList()
     {
-      $this->get(route('products'))
+      $this->get(route('api.products.index'))
            ->assert(ResponseOk());
-
     }
 }
