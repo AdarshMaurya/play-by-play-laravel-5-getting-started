@@ -18,4 +18,17 @@ class ExampleTest extends TestCase
 
         $response->assertStatus(200);
     }
+
+    public function testBasicExample()
+    {
+       $this->visit('/')
+            ->see('Laravel 5');
+    }
+
+    public function testProductList()
+    {
+      $this->get(route('products'))
+           ->assert(ResponseOk());
+
+    }
 }
