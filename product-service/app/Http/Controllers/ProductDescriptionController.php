@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Description;
 use Illuminate\Http\Request;
 
 class ProductDescriptionController extends Controller
@@ -11,9 +11,11 @@ class ProductDescriptionController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($productId)
     {
-        //
+        //return Description::all();
+        //return Description::ofProduct($productId)->get();
+        return Description::ofProduct($productId)->paginate();
     }
 
     /**
