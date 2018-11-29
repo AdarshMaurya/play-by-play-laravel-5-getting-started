@@ -20,46 +20,46 @@ class ExampleTest extends TestCase
 
         $response->assertStatus(200);
     }
-
+// https://stackoverflow.com/questions/42645066/acceptance-test-method-visit-undefined
     public function testBasicExample()
     {
-       $this->visit('/')
-            ->see('Laravel 5');
+       // $this->visit('/')
+       //      ->see('Laravel 5');
+       $this->get('/')
+            ->assertViewIs('welcome');
     }
 
-    // public function testProductList()
-    // {
-    //   $this->get(route('products'))
-    //        ->assert(ResponseOk());
-    // }
 
-    public function testProductList()
+    public function testProductsList()
     {
-      $this->get(route('api.products.index'))
-           ->assert(ResponseOk());
+        $this->get(route('products'))
+             ->assertOk();
+
+      $this->get(route('products.index'))
+           ->assertOk();
     }
 
-    public function testProductFactoryList()
+    public function testProductsFactoryList()
     {
       $products = factory(\App\Product::class,3)->create();
 
-      $this->get(route('api.products.index'))
-           ->assertResponseOk();
+      $this->get(route('products.index'))
+           ->assertOk();
 
       array_map(function($product){
-        $this -> seeJson($product->jsonSerialize());
+        $this -> assertJson($product);
       }, $products->all());
     }
 
-    public function testProuctDescriptions(){
-        $products = factory(\App\Product::class,3)->create();
+    public function testProudctsDescriptions(){
+        $products = factory(\App\Product::class)->create();
         $products->descriptions()->saveMany(factory(\App\Description::class,3)->make());
 
-        $this->get(route('api.products.descriptions.index',['products'=>id]))
-             ->assertResponseOk();
+        $this->get(route('products.descriptions.index',['products'=>$products->id]))
+             ->assertOk();
 
              array_map(function($descriptions){
-               $this -> seeJson($descriptions->jsonSerialize());
+               $this -> assertJson($descriptions);
              }, $products->descriptions->all());
     }
 }
