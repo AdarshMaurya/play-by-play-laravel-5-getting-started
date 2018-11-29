@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Product;
 use App\Description;
 use Illuminate\Http\Request;
 
@@ -34,9 +35,21 @@ class ProductDescriptionController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store($productId, Request $request)
     {
-        //
+        $product = Product::findorFail($productId);
+
+        $product->descriptions()->save(new Description([
+            'body' => $request->input('body')
+        ]));
+
+      //   $description = Description::create([
+      //   'product_id' => $productId,
+      //   'body' => $request->input('body')
+      //   ]);
+      // return $description;
+
+      return $product->descriptions;
     }
 
     /**

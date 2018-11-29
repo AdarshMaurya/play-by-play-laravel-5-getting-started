@@ -8,7 +8,11 @@ use Illuminate\Foundation\Testing\DatabaseTransactions;
 
 class ExampleTest extends TestCase
 {
+
   use DatabaseTransactions;
+
+
+      protected $jsonHeaders = ['Content-Type' => 'application/json', 'Accept' => 'application/json'];
     /**
      * A basic test example.
      *
@@ -39,7 +43,7 @@ class ExampleTest extends TestCase
            ->assertOk();
     }
 
-    public function testProductsFactoryList()
+    public function testProductFactoryList()
     {
       $products = factory(\App\Product::class,3)->create();
 
@@ -51,7 +55,7 @@ class ExampleTest extends TestCase
       }, $products->all());
     }
 
-    public function testProudctsDescriptions(){
+    public function testProudctDescriptions(){
         $products = factory(\App\Product::class)->create();
         $products->descriptions()->saveMany(factory(\App\Description::class,3)->make());
 
@@ -61,5 +65,21 @@ class ExampleTest extends TestCase
              array_map(function($descriptions){
                $this -> assertJson($descriptions);
              }, $products->descriptions->all());
+    }
+    //https://laracasts.com/discuss/channels/testing/badmethodcallexception-method-assertdatabasehas-does-not-exist?page=0#reply-392817
+    public function testProductCreation(){
+      $product = factory(\App\Product::class)->make(['name' => 'bbbeetsss']);
+
+      //$this->post(route('products.store'), $product->toArray(), $this->jsonHeaders)->assertSuccessful();
+      $this->post(route('products.store'), $product->toArray())->assertSuccessful();
+      $this->assertDatabaseHas('products',['name'=> $product->name]);
+    }
+
+    public function testProductDescriptionCreation(){
+      $product = factory(\App\Product::class)->create(['name' => 'bbbeetsss']);
+      $descriptions = factory(\App\Description::class)->make();
+      //$this->post(route('products.store'), $product->toArray(), $this->jsonHeaders)->assertSuccessful();
+      $this->post(route('products.descriptions.store',['products' =>$product->id]), $descriptions->toArray())->assertSuccessful();
+      $this->assertDatabaseHas('descriptions',['body'=> $descriptions->body]);
     }
 }

@@ -35,7 +35,10 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $product = Product::create([
+          'name' => $request->input('name')
+        ]);
+        return $product;
     }
 
     /**
