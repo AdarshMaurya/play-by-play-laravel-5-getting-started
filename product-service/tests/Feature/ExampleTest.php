@@ -68,7 +68,7 @@ class ExampleTest extends TestCase
     }
     //https://laracasts.com/discuss/channels/testing/badmethodcallexception-method-assertdatabasehas-does-not-exist?page=0#reply-392817
     public function testProductCreation(){
-      $product = factory(\App\Product::class)->make(['name' => 'bbbeetsss']);
+      $product = factory(\App\Product::class)->make(['name' => 'bbbeeetsss']);
 
       //$this->post(route('products.store'), $product->toArray(), $this->jsonHeaders)->assertSuccessful();
       $this->post(route('products.store'), $product->toArray())->assertSuccessful();
@@ -76,10 +76,18 @@ class ExampleTest extends TestCase
     }
 
     public function testProductDescriptionCreation(){
-      $product = factory(\App\Product::class)->create(['name' => 'bbbeetsss']);
+      $product = factory(\App\Product::class)->create(['name' => 'bbbbeetsss']);
       $descriptions = factory(\App\Description::class)->make();
       //$this->post(route('products.store'), $product->toArray(), $this->jsonHeaders)->assertSuccessful();
       $this->post(route('products.descriptions.store',['products' =>$product->id]), $descriptions->toArray())->assertSuccessful();
       $this->assertDatabaseHas('descriptions',['body'=> $descriptions->body]);
+    }
+
+    public function testProductUpdate(){
+      $product = factory(\App\Product::class)->create(['name' => 'beetss']);
+      $product->name ='feetss';
+      //$this->post(route('products.store'), $product->toArray(), $this->jsonHeaders)->assertSuccessful();
+      $this->put(route('products.update', ['products'=> $product->id]) ,$product->toArray())->assertSuccessful();
+      $this->assertDatabaseHas('products',['name'=> $product->name]);
     }
 }
