@@ -71,7 +71,8 @@ class ExampleTest extends TestCase
       $product = factory(\App\Product::class)->make(['name' => 'bbbeeetsss']);
 
       //$this->post(route('products.store'), $product->toArray(), $this->jsonHeaders)->assertSuccessful();
-      $this->post(route('products.store'), $product->toArray())->assertSuccessful();
+      $this->post(route('products.store'), $product->toArray());
+      //->assertSuccessful();
       $this->assertDatabaseHas('products',['name'=> $product->name]);
     }
 
@@ -87,7 +88,47 @@ class ExampleTest extends TestCase
       $product = factory(\App\Product::class)->create(['name' => 'beetss']);
       $product->name ='feetss';
       //$this->post(route('products.store'), $product->toArray(), $this->jsonHeaders)->assertSuccessful();
-      $this->put(route('products.update', ['products'=> $product->id]) ,$product->toArray())->assertSuccessful();
+      $this->put(route('products.update', ['products'=> $product->id]) ,$product->toArray());
+      //->assertSuccessful();
       $this->assertDatabaseHas('products',['name'=> $product->name]);
     }
+
+    public function testProductCreationFailsWhenNameNotProvided(){
+      $product = factory(\App\Product::class)->make(['name' => '']);
+      //$this->post(route('products.store'), $product->toArray(), $this->jsonHeaders)->assertSuccessful();
+      $this->post(route('products.descriptions.store'), $product>toArray())
+      ->assertJson(['name'=>['The name is required']])
+      ->assertStatus(422);
+    }
+
+    //public function testProductCreationFailsWhenNameNotProvided(){
+      public function testProductCreationFailsWhenNameNotUnique(){
+      $name ='feets';
+      $product1 = factory(\App\Product::class)->create(['name' => $name]);
+      $product2 = factory(\App\Product::class)->make(['name' => $name]);
+      //$this->post(route('products.store'), $product->toArray(), $this->jsonHeaders)->assertSuccessful();
+      $this->post(route('products.descriptions.store'),$product2->toArray())
+      ->assertJson(['name'=>['The name is already being taken.']])
+      ->assertStatus(422);
+    }
+
+    public function testProductDescriptionCreationFailsWhenBodyNotProvided(){
+      $product = factory(\App\Product::class)->create(['name' => 'beets']);
+      $descriptions = factory(\App\Description::class)->make(['body'=>'']);
+      //$this->post(route('products.store'), $product->toArray(), $this->jsonHeaders)->assertSuccessful();
+      $this->post(route('products.descriptions.store',['products' =>$product->id]), $descriptions->toArray())
+      ->assertJson(['body'=>['The body is required.']])
+      ->assertDatabaseHas('descriptions',['body'=> $descriptions->body])->assertStatus(422);
+    }
+
+    public function testProductCreationFailsWhenNameUpToQuality(){
+      $product = factory(\App\Product::class)->make(['name' => 'notquality']);
+
+      //$this->post(route('products.store'), $product->toArray(), $this->jsonHeaders)->assertSuccessful();
+      $this->post(route('products.store'), $product->toArray())
+      //->assertSuccessful();
+      ->assertJson(['name'=>['The product name provided does not match our standard of excellence.']])
+      ->assertStatus(422);;
+    }
+
 }
