@@ -1,0 +1,500 @@
+   64  npm audit fix --force
+   65  npm start
+   66  npm start
+   67  clear
+   68  npm i react-star-rating-component
+   69  npm audit fix --force
+   70  npm start
+   71  cd /Users/adarshmaurya/Playground/play-by-play-laravel-5-getting-started/
+   72  clear
+   73  composer create-project laravel/laravel --preper-dist product-service
+   74  ./composer create-project laravel/laravel --preper-dist product-service
+   75  clear
+   76  which php
+   77  php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" 
+   78  php -r "if (hash_file('sha384', 'composer-setup.php') === '93b54496392c062774670ac18b134c3b3a95e5a5e5c8f1a9f115f203b75bf9a129d5daa8ba6a13e2cc8a1da0806388a8') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
+   79  php composer-setup.php
+   80  ./composer create-project laravel/laravel --preper-dist product-service
+   81  clear
+   82  ls -la
+   83  ./composer.phar create-project laravel/laravel --preper-dist product-service
+   84  clear
+   85  ./composer.phar create-project laravel/laravel --prefer-dist product-service
+   86  clear
+   87  cd product-service/
+   88  php artisan 
+   89  ls-la
+   90  ls -la
+   91  cd config/
+   92  ls -la
+   93  nano database.php 
+   94  clear
+   95  cd ..
+   96  clear
+   97  ls -la
+   98  cd database
+   99  clear
+  100  ls -la
+  101  cd migrations
+  102  ls -la
+  103  rm -f 2014_10_12_000000_create_users_table.php
+  104  rm -f 2014_10_12_100000_create_password_resets_table.php 
+  105  clear
+  106  cd ..
+  107  cd ..
+  108  php artisan make:migration create_product_table  --create=products
+  109  clear
+  110  php artisan make:migration create_descriptions_table  --create=descriptions 
+  111  clear
+  112  cd database/migrations/
+  113  ls -la
+  114  vim 2018_11_26_233429_create_product_table.php
+  115  nano 2018_11_26_233429_create_product_table.php
+  116  clear
+  117  php artisan migrate
+  118  cd..
+  119  cd..
+  120  cd .. 
+  121  cd ..
+  122  clear
+  123  php artisan migrate
+  124  clear
+  125  php artisan migrate -v
+  126  clear
+  127  php artisan migrate -v
+  128  clear
+  129  php artisan migrate -v
+  130  clear
+  131  php artisan migrate -v
+  132  php artisan migrate -v
+  133  cd product-service/
+  134  clear
+  135  cd /Users/adarshmaurya/Playground/play-by-play-laravel-5-getting-started/product-service/vendor/phpunit/phpunit
+  136  phpunit
+  137  phpunit clear
+  138  clear
+  139  cd ..
+  140  cd ..
+  141  cd ..
+  142  phpunit Feature
+  143  phpunit Test
+  144  c;ear
+  145  clear
+  146  phpunit ExampleTest
+  147  phpunit
+  148  phpunit Example
+  149  phpunit ExampleTest
+  150  cd Playground/
+  151  clear
+  152  cd play-by-play-laravel-5-getting-started/
+  153  clear
+  154  clear
+  155  cd product-service/
+  156  php artisan migrate:rollback
+  157  clear
+  158  php artisan migrate:rollback
+  159  php artisan migrate
+  160  php artisan migrate:reset
+  161  php artisan migrate:refresh
+  162  php artisan make:seeder ProductTableSeeder
+  163  php artisan db:seed
+  164  clear
+  165  clear
+  166  php artisan db:seed
+  167  clear
+  168  php artisan db:seed
+  169  clear
+  170  php artisan db:seed
+  171  clear
+  172  php artisan db:seed -v
+  173  clear
+  174  php artisan make:seeder ProductTableSeeder
+  175  clear
+  176  php artisanmigrate: refresh
+  177  php artisan migrate: refresh
+  178  clear
+  179  php artisan migrate: refresh
+  180  php artisan migrate: status
+  181  php artisan migrate: reset
+  182  clear
+  183  ls -la
+  184  clear
+  185  php artisan: migrate: rollback
+  186  php artisan migrate: rollback
+  187  clear
+  188  php artisan migrate:rollback
+  189  php artisan migrate:refresh
+  190  php artisan make:seeder ProductTableSeeder
+  191  php artisan migrate:reset
+  192  php artisan migrate:refresh
+  193  php artisan make:seeder ProductTableSeeder
+  194  php artisan --version
+  195  clear
+  196  php artisan db:seed
+  197  clear
+  198  php artisan db:seed
+  199  clear
+  200  composer update
+  201  ls -la
+  202  cd ..
+  203  clear
+  204  ./composer.phar update
+  205  clear
+  206  cd product-service/
+  207  ./composer.phar update
+  208  composer update
+  209  cd..
+  210  cd ..
+  211  clear
+  212  ./composer.phar dum[-autoload
+  213  ./composer.phar dump-autoload
+  214  ./composer.phar product-service dump-autoload
+  215  clear
+  216  cd product-service/
+  217  clear
+  218  ../composer.phar dump-autoload
+  219  php artisan db:seed
+  220  php artisan db:seed --class=ProductTableSeeder
+  221  php artisan db:seed
+  222  php artisan db:seed
+  223  php artisan db:seed
+  224  clear
+  225  rm -f app/User.php
+  226  php artisan make:model Product
+  227  php artisan make:model Description
+  228  clear
+  229  php artisan serve --host=192.168.0.6
+  230  clear
+  231  php artisan serve --host=192.168.0.6
+  232  clear
+  233  php artisan serve --host=192.168.0.6
+  234  clear
+  235  php artisan make:controller ProductController
+  236  php artisan make:controller ProductDescriptionController
+  237  php artisan make:controller ProductDescriptionController --resource
+  238  php artisan make:controller ProductController --resource
+  239  ../composer.phar dump-autoload
+  240  ../composer.phar update
+  241  ../composer.phar dump-autoload
+  242  ../composer.phar update
+  243  ../composer.phar dump-autoload
+  244  php artisan make:controller ProductController --resource
+  245  php artisan make:controller ProductDescriptionController --resource
+  246  php artisan make:controller ProductController
+  247  ../composer.phar dump-autoload
+  248  php artisan make:controller ProductController --resource
+  249  php artisan make:controller ProductDescriptionController --resource
+  250  php artisan serve --host=192.168.0.6
+  251  phpunit
+  252  clear
+  253  php phpunit
+  254  clear
+  255  phpunit
+  256  clear
+  257  phpunit --version
+  258  phpunit
+  259  phpunit ./tests/Feature/ExampleTest.php
+  260  clear
+  261  phpunit ExampleTest.php
+  262  phpunit tests/Feature/ExampleTest.php
+  263  clear
+  264  phpunit ExampleTest.php
+  265  phpunit TestCase.php
+  266  clear
+  267  phpunit Feature/ExampleTest.php
+  268  clear
+  269  php artisan route:list
+  270  cd ..
+  271  composer.phar dump-autoload
+  272  cd product-service/
+  273  composer.phar dump-autoload
+  274  cd ..
+  275  cd ./composer.phar dump-autoload
+  276  clear
+  277  ls -la
+  278  ./composer.phar dump-autoload
+  279  clear
+  280  cd product-service/
+  281  ./composer.phar dump-autoload
+  282  ../composer.phar dump-autoload
+  283  php artisan make:controller ProductsDescriptionController
+  284  php artisan route:list
+  285  clear
+  286  php artisan route:list
+  287  clear
+  288  php artisan route:list
+  289  clear
+  290  clear
+  291  php artisan make:seeder DescriptionTableSeeder
+  292  php artisan db:seed --class=DescriptionTableSeeder
+  293  ../composer.phar dump-autoload
+  294  clear
+  295  php artisan db:seed --class=DescriptionTableSeeder
+  296  clear
+  297  php artisan db:seed --class=DescriptionTableSeeder
+  298  php artisan serve --host=192.168.0.6
+  299  clear
+  300  phpunit
+  301  clear
+  302  phpunit
+  303  clear
+  304  phpunit
+  305  clear
+  306  phpunit ExampleTest
+  307  clear
+  308  ls -la
+  309  cd tests
+  310  ls -la
+  311  cd ..
+  312  clear
+  313  php artisan serve --host=192.168.0.6
+  314  phpunit
+  315  clear
+  316  phpunit
+  317  phpunit
+  318  clear
+  319  phpunit
+  320  clear
+  321  cd /Users/adarshmaurya/Playground/play-by-play-laravel-5-getting-started/product-service/
+  322  clear
+  323  clear
+  324  which php
+  325  clear
+  326  phpunit --h
+  327  clear
+  328  phpunit Test
+  329  clear
+  330  ./vendor/bin/phpunit
+  331  clear
+  332  ./vendor/bin/phpunit
+  333  clear
+  334  ./vendor/bin/phpunit
+  335  clear
+  336  history > laravelCommand.txt
+  337  clear
+  338  ./vendor/bin/phpunit
+  339  clear
+  340  php artisan route -list
+  341  clear
+  342  php route -list
+  343  php routes -list
+  344  clear
+  345  php artisan route:list
+  346  c;ear
+  347  clear
+  348  ./vendor/bin/phpunit
+  349  clear
+  350  ./vendor/bin/phpunit
+  351  ./vendor/bin/phpunit
+  352  clear
+  353  ./vendor/bin/phpunit
+  354  ./vendor/bin/phpunit
+  355  ./vendor/bin/phpunit
+  356  clear
+  357  ./vendor/bin/phpunit
+  358  clear
+  359  ./vendor/bin/phpunit
+  360  ./vendor/bin/phpunit
+  361  clear
+  362  ./vendor/bin/phpunit
+  363  clear
+  364  ./vendor/bin/phpunit
+  365  clear
+  366  ./vendor/bin/phpunit
+  367  ./vendor/bin/phpunit
+  368  clear
+  369  ./vendor/bin/phpunit
+  370  clear
+  371  ./vendor/bin/phpunit
+  372  ./vendor/bin/phpunit
+  373  clear
+  374  ./vendor/bin/phpunit
+  375  ./vendor/bin/phpunit
+  376  clear
+  377  ./vendor/bin/phpunit
+  378  ./vendor/bin/phpunit
+  379  ./vendor/bin/phpunit
+  380  clear
+  381  ./vendor/bin/phpunit
+  382  ./vendor/bin/phpunit
+  383  clear
+  384  ./vendor/bin/phpunit
+  385  clear
+  386  ./vendor/bin/phpunit
+  387  clear
+  388  ./vendor/bin/phpunit
+  389  ./vendor/bin/phpunit
+  390  clear
+  391  ./vendor/bin/phpunit
+  392  ./vendor/bin/phpunit
+  393  clear
+  394  ./vendor/bin/phpunit
+  395  clear
+  396  ./vendor/bin/phpunit
+  397  clear
+  398  ./vendor/bin/phpunit
+  399  clear
+  400  ./vendor/bin/phpunit
+  401  clear
+  402  ./vendor/bin/phpunit
+  403  clear
+  404  ./vendor/bin/phpunit
+  405  ./vendor/bin/phpunit
+  406  clear
+  407  ./vendor/bin/phpunit
+  408  clear
+  409  ./vendor/bin/phpunit
+  410  clear
+  411  ./vendor/bin/phpunit
+  412  clear
+  413  ./vendor/bin/phpunit
+  414  clear
+  415  ./vendor/bin/phpunit
+  416  clear
+  417  ./vendor/bin/phpunit
+  418  clear
+  419  ./vendor/bin/phpunit
+  420  clear
+  421  ./vendor/bin/phpunit
+  422  clear
+  423  ./vendor/bin/phpunit
+  424  clear
+  425  ./vendor/bin/phpunit
+  426  clear
+  427  ./vendor/bin/phpunit
+  428  clear
+  429  ./vendor/bin/phpunit
+  430  clear
+  431  ./vendor/bin/phpunit
+  432  ./vendor/bin/phpunit
+  433  clear
+  434  ./vendor/bin/phpunit
+  435  clear
+  436  ./vendor/bin/phpunit
+  437  clear
+  438  ./vendor/bin/phpunit
+  439  clear
+  440  ./vendor/bin/phpunit
+  441  clear
+  442  ./vendor/bin/phpunit
+  443  clar
+  444  clear
+  445  ./vendor/bin/phpunit
+  446  clar
+  447  clear
+  448  ./vendor/bin/phpunit
+  449  clear
+  450  clear
+  451  clear
+  452  ./vendor/bin/phpunit
+  453  clear
+  454  ./vendor/bin/phpunit
+  455   lear
+  456  clear
+  457  clear
+  458  ./vendor/bin/phpunit
+  459  clear
+  460  ./vendor/bin/phpunit
+  461  clear
+  462  ./vendor/bin/phpunit
+  463  clear
+  464  ./vendor/bin/phpunit
+  465  clear
+  466  ./vendor/bin/phpunit
+  467   clear
+  468  ./vendor/bin/phpunit
+  469  clear
+  470  ./vendor/bin/phpunit
+  471  clear
+  472  ./vendor/bin/phpunit
+  473  clear
+  474  ./vendor/bin/phpunit
+  475  clear
+  476  ./vendor/bin/phpunit
+  477  clear
+  478  ./vendor/bin/phpunit
+  479  ./vendor/bin/phpunit
+  480  clear
+  481  ./vendor/bin/phpunit
+  482  ./vendor/bin/phpunit
+  483  ./vendor/bin/phpunit
+  484  ./vendor/bin/phpunit
+  485  clear
+  486  ./vendor/bin/phpunit
+  487  clear
+  488  ./vendor/bin/phpunit
+  489  clear
+  490  ./vendor/bin/phpunit
+  491  clear
+  492  ./vendor/bin/phpunit
+  493  clear
+  494  ./vendor/bin/phpunit
+  495  clear
+  496  ./vendor/bin/phpunit
+  497  clear
+  498  ./vendor/bin/phpunit
+  499  ./vendor/bin/phpunit
+  500  cd product-service/
+  501  clear
+  502  ./vendor phpunit
+  503  clear
+  504  history
+  505  clear
+  506  ./vendor/bin/phpunit
+  507  clear
+  508  ./vendor/bin/phpunit
+  509  clear
+  510  ./vendor/bin/phpunit
+  511  clear
+  512  ./vendor/bin/phpunit
+  513  clear
+  514  ./vendor/bin/phpunit
+  515  clear
+  516  ./vendor/bin/phpunit
+  517  clear
+  518  ./vendor/bin/phpunit
+  519  clear
+  520  ./vendor/bin/phpunit
+  521  clear
+  522  clear
+  523  ./vendor/bin/phpunit
+  524  clear
+  525  ./vendor/bin/phpunit
+  526  clear
+  527  ./vendor/bin/phpunit
+  528  clear
+  529  ./vendor/bin/phpunit
+  530  clear
+  531  ./vendor/bin/phpunit
+  532  clear
+  533  ./vendor/bin/phpunit
+  534  clear
+  535  ./vendor/bin/phpunit
+  536  celar
+  537  clear
+  538  ./vendor/bin/phpunit
+  539  clear
+  540  ./vendor/bin/phpunit
+  541  clear
+  542  ./vendor/bin/phpunit
+  543  clear
+  544  clear
+  545  ./vendor/bin/phpunit
+  546  clar
+  547  clear
+  548  ./vendor/bin/phpunit
+  549  clear
+  550  clear
+  551  clear
+  552  ./vendor/bin/phpunit
+  553  clear
+  554  ./vendor/bin/phpunit
+  555  clear
+  556  ./vendor/bin/phpunit
+  557  clear
+  558  ./vendor/bin/phpunit
+  559  clear
+  560  ./vendor/bin/phpunit
+  561  clear
+  562  ls -la
+  563  history > laravelCommand.txt
