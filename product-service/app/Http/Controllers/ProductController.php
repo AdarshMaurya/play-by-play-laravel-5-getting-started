@@ -35,6 +35,12 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
+      this -> validate($request,[
+        // 'name' => 'required|unique:products'
+          'name' => 'required|unique:products|productQuality'
+      ]);
+
+
         $product = Product::create([
           'name' => $request->input('name')
         ]);
@@ -72,11 +78,11 @@ class ProductController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $product = Product::findOrFail($id);
+        // $product = Product::findOrFail($id);
 
-        $product->update([
-          'name' => $request->input('name');
-        ]);
+        // $product->update([
+        //   'name' => $request->input('name');
+        // ]);
     }
 
     /**
