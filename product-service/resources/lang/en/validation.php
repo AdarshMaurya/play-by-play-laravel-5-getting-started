@@ -115,6 +115,8 @@ return [
     'url' => 'The :attribute format is invalid.',
     'uuid' => 'The :attribute must be a valid UUID.',
 
+    'product_quality' => 'The product name provided does not match our standard of excellence.'
+
     /*
     |--------------------------------------------------------------------------
     | Custom Validation Language Lines

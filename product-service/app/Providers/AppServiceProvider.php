@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\Validator;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -13,7 +14,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        Validator::extend('productQuality', function($attribute, $value, $parameters){
+          return !preg_match('/[^A-Za-z]/',$value)
+                  && preg_match('/eets|eats|uites|etes|ites|ettes$',$value);
+        });
     }
 
     /**
